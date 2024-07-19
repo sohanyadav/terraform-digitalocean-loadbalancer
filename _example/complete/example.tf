@@ -12,7 +12,7 @@ locals {
 ## VPC module call
 ##------------------------------------------------
 module "vpc" {
-  source      = "git::https://github.com/opsstation/terraform-digitalocean-vpc.git?ref=v1.0.0"
+  source      = "git::https://github.com/sohanyadav/terraform-digitalocean-vpc.git?ref=v1.0.0"
   name        = local.name
   environment = local.environment
   label_order = ["name", "environment"]
@@ -25,7 +25,7 @@ module "vpc" {
 ## droplet module call
 ##-----------------------------------------------------------------------
 module "droplet" {
-  source             = "git::https://github.com/opsstation/terraform-digitalocean-droplet.git?ref=v1.0.0"
+  source             = "git::https://github.com/sohanyadav/terraform-digitalocean-droplet.git?ref=v1.0.0"
   name               = local.name
   environment        = local.environment
   region             = local.region
